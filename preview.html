@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head><title>Data Preview</title></head>
+<body>
+  <h2>📑 Data Preview</h2>
+  <a href="/univariate">Go to Univariate Analysis →</a>
+  {% for table in tables %}
+    {{ table|safe }}
+  {% endfor %}
+</body>
+</html>

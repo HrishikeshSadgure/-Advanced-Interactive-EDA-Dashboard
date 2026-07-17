@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Univariate Analysis</title></head>
+<body>
+  <h2>📊 Univariate Analysis</h2>
+  <form method="POST">
+    <label for="column">Select Column:</label>
+    <select name="column">
+      {% for col in columns %}
+        <option value="{{ col }}" {% if col == selected_col %}selected{% endif %}>{{ col }}</option>
+      {% endfor %}
+    </select>
+    <input type="submit" value="Generate Plot">
+  </form>
+  <div>
+    {{ plot_div | safe }}
+  </div>
+</body>
+</html>
